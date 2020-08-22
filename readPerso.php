@@ -6,7 +6,29 @@ $req = $bdd->prepare(' SELECT *
          FROM personnage
          ');
 $req->execute();
-$donnees = $req->fetch();
+$data = $req->fetch(); ?>
+
+<div>
+    <div>
+    <?php while ($data = $req->fetch()) : ?>
+        Nom du personnage :
+        <?php echo $data['name']; ?>
+    </div>
+
+    <div>Animation :
+        <?php echo $data['animation']; ?>
+    </div>
+
+    <div>
+        Description :
+        <?php echo $data['description']; ?>
+    </div>
+    <hr>
+   
+
+ 
+<?php endwhile; ?>
+</div>
 
 
 

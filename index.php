@@ -1,6 +1,6 @@
 <?php require_once 'header.php';
 require_once 'database.php';
-require_once 'readPerso.php';?>
+?>
 <!-- Script -->
 <script type="text/javascript">
         $(document).ready(function () {
@@ -90,20 +90,6 @@ require_once 'readPerso.php';?>
     </div>
 </div>
 
-<div>
-    <div>
-        <?php echo $donnees['name']; ?>
-    </div>
-
-    <div>
-        <?php echo $donnees['animation']; ?>
-    </div>
-
-    <div>
-        <?php echo $donnees['description']; ?>
-    </div>
-</div>
-
-
+<?php require 'readPerso.php'; ?>
 
 <?php require_once 'footer.php';
